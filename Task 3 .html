@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3</title>
+    <style>
+             /* ----------------------------------------------------- Task 3 */
+    body{
+        background-color: rgb(226, 197, 197);
+    }
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+    .gellary{
+        width: 600px;
+    
+    }
+    .gellary .big-img{
+            width: 100%;
+            
+        }
+    .gellary img{
+            width: 115px;
+        }
+    .small-img-card{
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+    .small-img{
+            width: 24%;
+            height: 100px;
+            opacity: 0.5;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+    .small-img.active{
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    
+                    <!-- ------------ --    --- Task 3 -->
+                                                        <div class="container">
+                                                            <div class="gellary">
+                                                                <div class="big-img-card">
+                                                                    <img src="imgs/1.jpg" class="big-img">
+                                                                </div>
+                                                                <div class="small-img-card">
+                                                                    <img src="imgs/1.jpg" class="small-img active">
+                                                                    <img src="imgs/2.jpg" class="small-img">
+                                                                    <img src="imgs/3.jpg" class="small-img">
+                                                                    <img src="imgs/5.jpg" class="small-img">
+
+                                                                    <img src="imgs/4.jpeg" class="small-img">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+
+    $(".small-img").click(function(){
+        $(".small-img").removeClass("active");
+        $(this).addClass('active');
+        $(".big-img").attr("src" , $(this).attr("src"))
+    })
+    </script>
+</body>
+</html>
